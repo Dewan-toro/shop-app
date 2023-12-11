@@ -6,8 +6,11 @@
     <title>Products</title>
   </head>
   <body>
-    <h1>All Product</h1>
+    <h1><%= category %> Product</h1>
     <a href="/products/create">Add Product</a>
+    <% if(category !== 'All') {%>
+    <a href="/products">All Products</a>
+    <% }%>
     <ul>
       <% for(product of products) { %>
       <li>
